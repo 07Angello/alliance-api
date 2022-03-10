@@ -4,6 +4,7 @@ const satelites = [
     {name: 'Sato', x: 500, y: 100},
 ];
 
+// LEVEL 1
 const getLocation = (distances) => {
     //formula de sustitucion para encontrar coordenadas
     const x1 = satelites[0].x;
