@@ -10,6 +10,9 @@ Bien, para correr el proyecto basta con instalar inicialmente las dependencias d
 ## Installation
 
 Alliance-api require [Node.js](https://nodejs.org/) v10+ para correr.
+Por defecto, el proyecto tiene configurado el puerto 4000 para pruebas locales.
+
+```localhost:4000/api/```
 
 Instala las dependencias y corre el servidor
 
