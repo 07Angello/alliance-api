@@ -14,6 +14,15 @@ const SatelliteSchema = Schema({
         type: Number,
         required: true
     },
+    distance: {
+        type: Number,
+        default: 0,
+    },
+    message: {
+        type: String,
+        default: '',
+        trim: true,
+    },
     isActive: {
         type: Boolean,
         required: true,

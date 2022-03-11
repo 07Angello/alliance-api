@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
 const { fieldsValidator } = require('../../middlewares/fieldsValidator');
-const { createSatellite, getSatellites } = require('./satelliteAppService');
+const { createSatellite, getSatellites,calculateCoordinatesAndMessage, recalculateDistanceAndMessage } = require('./satelliteAppService');
 const { jwtValidator } = require('../../middlewares/jwtValidator');
 
 const router = Router();
@@ -21,9 +21,11 @@ router.post('/',
     ],
     createSatellite);
 
-router.get("/:satelliteName", getSatellites);
+router.get("/topsecret/", calculateCoordinatesAndMessage);
 
-router.get("/topsecret", getSatellites);
+router.get("/topsecret_split/:satelliteName", recalculateDistanceAndMessage);
+
+router.get("/info/:satelliteName", getSatellites);
 
 
 module.exports = router;
